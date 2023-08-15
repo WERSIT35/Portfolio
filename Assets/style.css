@@ -17,7 +17,6 @@ body{
     transition:1s ease-in-out;
     background-color: hsla(0, 0%, 30%, 20%);
     transition: 0.3s;
-    /* box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 60%); */
 }
 .head:hover{
     background-color: hsla(0, 0%, 67%, 0.219);
@@ -132,7 +131,7 @@ body{
     width: 200px;
 }
 .skills img{
-    width: 60px;
+    width: 50px;
 }
 .mode{
     transition:1s ease-in-out;
@@ -176,11 +175,11 @@ body{
     color: goldenrod;
     text-align: center;
 }
-.ganatleba, .certificate{
+.ganatleba, .certificate ,.resweb{
     display: flex;
     justify-content: center;
 }
-.ganatleba img, .certificate img{
+.ganatleba img, .certificate img, .resweb img{
     width: 40%;
     filter: drop-shadow(2px 2px 7px black);
 }
@@ -312,6 +311,6 @@ body{
     .mode{
         z-index: 1;
         position: fixed;
-        top: 93%;
+        
     }
 }
