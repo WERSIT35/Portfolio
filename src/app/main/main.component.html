@@ -1,0 +1,110 @@
+<main>
+    <article>
+        <div class="nameSurname">
+            <div class="titleContainer">
+                <h1 data-aos="flip-up" data-aos-duration="500">hello, i'm</h1>
+                <h1 data-aos="fade-right" data-aos-duration="1000">Otar Davitashvili</h1>
+                <p data-aos="fade-right" data-aos-duration="2000">Web Developer</p>
+            </div>
+            <div class="txtContainer">
+                <p data-aos="flip-up" data-aos-duration="1000">
+                    Accomplished Angular Developer, proficient in dev tools and languages, Skilled in strategic leadership, I am eager to contribute my expertise to a technology-driven team, emphasizing adaptability, attention to detail, and dedication to delivering exceptional results.
+                </p>
+            </div>
+            <div data-aos="fade-right" data-aos-duration="1000" class="buttons">
+                <button class="btn1" (click)="download()">Download CV</button>
+                <button class="btn2">Contact</button>    
+            </div>
+        </div>
+        <div  class="image"><img src="../../assets/last.png" alt="Otar Davitashvili">
+    <div class="pattern"></div></div>
+        <p class="abs">Slide For More<i class="fa-solid fa-circle-arrow-down"></i></p>
+    </article>
+    <section class="sect1">
+        <h1>Experience</h1>
+        <div class="gamocdileba">
+            <ul>
+                <li *ngFor="let gamoc of gamocdilebaList" data-aos="fade-up">
+                    <div class="txtGamocdileba">
+                        <h2>{{gamoc.position}}</h2>
+                        <h3>{{gamoc.info}}</h3>
+                        <p>{{gamoc.date}}</p>
+                    </div>
+                    <img [src]="gamoc.image" [alt]="gamoc.alt">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- <section class="sect3">
+        <div class="tech">
+            <h2>Technical Skills</h2>
+            <ul class="skill-list">
+              <li>
+                <h3>Operating Systems:</h3>
+                <span class="skill-name">
+                    Windows 7/8.1/10/11
+                    </span>
+                <div class="progress-bar" style="width: 80%;"></div>
+              </li>
+              <li>
+                <h3>Problem Solving and Debugging:</h3>
+                <span class="skill-name">
+                    Problem Solving</span>
+                <div class="progress-bar" style="width: 80%;"></div>
+              </li>
+              <li>
+                <h3>Engineering:</h3>
+                <span class="skill-name">
+                    Computer Engineering</span>
+                <div class="progress-bar" style="width: 80%;"></div>
+                <span class="skill-name">
+                    Software Engineering</span>
+                <div class="progress-bar" style="width: 80%;"></div>
+              </li>
+              <li>
+                <h3>Web Design:</h3>
+                <span class="skill-name">
+                    Responsive Web Design</span>
+                <div class="progress-bar" style="width: 80%;"></div>
+              </li>
+            </ul>
+        </div>
+        <div class="soft">
+            <h2>Soft Skills</h2>
+            <ul class="skill-list">
+              <li>
+                <span class="skill-name">Talking</span>
+                <div class="progress-bar" style="width: 80%;"></div>
+              </li>
+            </ul>
+        </div>
+      
+        <div class="prog">
+            <h2>Programming Languages</h2>
+            <ul class="skill-list">
+              <li>
+                <span class="skill-name">HTML/CSS</span>
+                <div class="progress-bar" style="width: 90%;"></div>
+              </li>
+            </ul>
+        </div>
+      </section> -->
+      
+    <section class="sect2">
+        <h1>Education</h1>
+        <div class="ganatleba">
+            <ul>
+                <a *ngFor="let ganatleba of ganatlebaList" href="">
+                    <li>
+                        <div class="university">
+                            <h2>{{ganatleba.name}}</h2>
+                            <h3>{{ganatleba.marjor}}</h3>
+                            <p>{{ganatleba.date}}</p>
+                        </div>
+                        <img [src]="ganatleba.image" [alt]="ganatleba.alt">
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </section>
+</main>

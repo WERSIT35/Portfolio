@@ -1,0 +1,414 @@
+main {
+  width: 100%;
+  article {
+    height: 100vh;
+    // backdrop-filter: blur(10px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .nameSurname {
+      width: 50%;
+      height: 100%;
+      gap: 40px;
+      margin-bottom: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: center;
+      h1 {
+        width: 100%;
+        font-size: 4rem;
+        color: var(--gold);
+        filter: drop-shadow(5px 5px 0 var(--dark-1));
+        // -webkit-text-stroke: 2px var(--gold);
+        &:lang(en) {
+          font-family: "Oswald", sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+        &:nth-child(1) {
+          color: transparent;
+          -webkit-text-stroke: 2px var(--white);
+        }
+      }
+      p {
+        filter: drop-shadow(5px 5px 0 var(--dark-1));
+        font-size: 2rem;
+        color: var(--white);
+        &:lang(en) {
+          font-family: "Josefin Sans", sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+      }
+    }
+    .txtContainer {
+      width: 70%;
+      p {
+        margin-top: 20px;
+        text-align: justify;
+        font-size: 1rem;
+        text-transform: lowercase;
+        line-height: 2;
+        backdrop-filter: blur(10px);
+        padding: 10px;
+        border-radius: 10px;
+        filter: drop-shadow(2px 2px 0 var(--dark-1));
+
+        &:lang(en) {
+          font-family: "Josefin Sans", sans-serif;
+          text-transform: lowercase;
+        }
+      }
+    }
+    .image {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      .pattern {
+        height: 35%;
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+      }
+      img {
+        z-index: 1;
+        width: 400px;
+        height: 400px;
+        object-fit: contain;
+        border-radius: 50%;
+        padding: 5px;
+        border: 10px solid var(--gold);
+        filter: drop-shadow(10px 10px 10px var(--dark-1));
+        background-color: #151515;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='36' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23303030' stroke-width='12' stroke-opacity='0.79'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+        background-attachment: fixed;
+      }
+    }
+    .buttons {
+      margin: 30px 0;
+      .btn1,
+      .btn2 {
+        margin-right: 20px;
+        transition: 0.2s;
+        background-color: var(--dark-1);
+        color: var(--white);
+        border: 3px solid var(--gold);
+        animation: backlight 2s infinite;
+        &:lang(en) {
+          font-family: "Josefin Sans", sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          text-align: center;
+          padding: 10px 20px;
+        }
+        &:hover {
+          background-color: var(--white);
+          color: var(--dark-1);
+          cursor: pointer;
+        }
+      }
+    }
+    .abs {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-self: center;
+      color: var(--white);
+      bottom: 3%;
+      animation: hanging 2s infinite;
+      -webkit-text-stroke: 0.2px var(--white);
+      &:lang(en) {
+        font-family: "Josefin Sans", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+      }
+      i {
+        padding: 10px;
+        font-size: 30px;
+      }
+    }
+  }
+  .sect1 {
+    width: 100%;
+    // background-image: url(../../assets/svg/wavey-fingerprint.svg);
+    h1 {
+      background-color: #151515;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='36' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23303030' stroke-width='12' stroke-opacity='0.79'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+      background-attachment: fixed;
+      text-align: center;
+      color: transparent;
+      font-size: 4rem;
+      -webkit-text-stroke: 2px var(--gold);
+      &:lang(en) {
+        font-family: "Oswald", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+    }
+    .gamocdileba {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      ul {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        li {
+          margin: 20px 0;
+          border-radius: 10px;
+          width: 100%;
+          height: 70vh;
+          position: relative;
+          display: flex;
+          justify-self: center;
+          align-items: center;
+          backdrop-filter: blur(10px);
+          .txtGamocdileba {
+            h2,
+            p ,h3{
+              position: absolute;
+              z-index: 999;
+              color: var(--white);
+              background-color: #151515;
+              background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='36' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23303030' stroke-width='12' stroke-opacity='0.79'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+              background-attachment: fixed;
+            }
+            h2 {
+              width: 100%;
+              text-align: center;
+              bottom: 25%;
+              color: var(--white);
+              font-size: 2.5rem;
+              transition: 0.2s;
+              &:lang(en) {
+                font-family: "Oswald", sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+              }
+            }
+            h3{
+              padding: 5px 10px;
+              font-size: 1.5rem;
+              left: 0;
+              bottom: 15%;
+              &:lang(en) {
+                font-family: "Oswald", sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+              }
+              transition: 0.2s;
+            }
+            p {
+              padding: 5px 10px;
+              font-size: 1.5rem;
+              right: 0;
+              bottom: 15%;
+              &:lang(en) {
+                font-family: "Josefin Sans", sans-serif;
+                letter-spacing: 2px;
+              }
+            }
+          }
+          img {
+            filter: brightness(80%);
+            z-index: 998;
+            position: absolute;
+            width: 100%;
+            height: 80%;
+            object-fit: cover;
+            transition: 0.2s;
+          }
+          &:hover img{
+            filter: brightness(100%);
+          }
+          &:hover .txtGamocdileba h2{
+            color: transparent;
+            -webkit-text-stroke: 1px var(--gold);
+            transition: 0.2s;
+          }
+        }
+      }
+    }
+  }
+  .sect2{
+    h1{
+      background-color: #151515;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='36' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23303030' stroke-width='12' stroke-opacity='0.79'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+      background-attachment: fixed;
+      text-align: center;
+      color: transparent;
+      font-size: 4rem;
+      -webkit-text-stroke: 2px var(--gold);
+      &:lang(en) {
+        font-family: "Oswald", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+    }
+    .ganatleba{
+      ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        a{
+          padding: 20px;
+          margin: 40px 0;
+          border-radius: 10px;
+          backdrop-filter: blur(10px);
+          position: relative;
+          text-decoration: none;
+          width: 70vw;
+          transition: 0.2s;
+          &:hover{
+            backdrop-filter: blur(5px);
+          }
+          &:hover li h2{
+            color: transparent;
+            -webkit-text-stroke: 1px var(--gold);
+            filter: drop-shadow(4px 4px 0 var(--dark-1));
+          }
+          &:hover li h3{
+            color: transparent;
+            -webkit-text-stroke: 1px var(--white);
+            filter: drop-shadow(4px 4px 0 var(--dark-1));
+          }
+          
+          li{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h2,
+            p ,h3{
+              position: absolute;
+              z-index: 999;
+              color: var(--white);
+            }
+            h2{
+              top: 20%;
+              font-size: 2.5rem;
+              transition: 0.3s;
+              &:lang(en) {
+                font-family: "Oswald", sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+              }
+            }
+            h3{
+              top: 50%;
+              font-size: 1.5rem;
+              transition: 0.3s;
+              &:lang(en) {
+                font-family: "Oswald", sans-serif;
+                letter-spacing: 2px;
+              }
+            }
+            P{
+              bottom: 20%;
+              &:lang(en) {
+                font-family: "Josefin Sans", sans-serif;
+                letter-spacing: 2px;
+              }
+            }
+            img{
+              width: 70%;
+              height: 30vh;
+              object-fit: contain;
+              filter: brightness(65%);
+              transition: 0.2s;
+            }
+          }
+          &:nth-child(2){
+            li{
+              img{
+                filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg) brightness(65%) contrast(100%);
+              }
+            }
+          }
+          &:hover li img{
+            filter: brightness(100%);
+          }
+          &:nth-child(2):hover{
+            li{
+              img{
+                filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%);
+              }
+            }
+          }
+          &:nth-child(3){
+            li{
+              img{
+                width: 40vw;
+              }
+            }
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+
+
+.skills {
+  
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-list li {
+  margin-bottom: 10px;
+}
+
+.skill-name {
+  font-weight: bold;
+  display: inline-block;
+  width: 120px;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #ccc;
+}
+
+
+@keyframes backlight {
+  0% {
+    filter: none;
+  }
+  50% {
+    filter: drop-shadow(0px 0px 3px var(--white));
+  }
+  100% {
+    filter: none;
+  }
+}
+@keyframes hanging {
+  0% {
+    transform: translateY(0);
+    filter: none;
+  }
+  50% {
+    transform: translateY(20px);
+    filter: drop-shadow(0px 0px 10px var(--gold));
+    color: var(--dark-1);
+  }
+  100% {
+    transform: translateY(0);
+    filter: none;
+  }
+}

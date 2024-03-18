@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --dark-1:#151515;
+    --dark-2:#1a1a1a;
+    --dark-3:#272727;
+    --dark-tr:#151515b4;
+    --white:#fff;
+    --gold:#daa520;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    // background-color: var(--dark-1);
+    // background-image: url(../src/assets/svg/black-white-background.svg);
+    background-image: url(../src/assets/svg/vanishing-stripes.svg);
+    background-size: 100%;
+    background-attachment: fixed;
+}
