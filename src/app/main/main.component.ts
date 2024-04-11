@@ -1,18 +1,19 @@
 import { CommonModule , isPlatformBrowser } from '@angular/common';
-import { Component, Inject, Input, OnInit, PLATFORM_ID, inject, input } from '@angular/core';
+import { AfterViewInit, Component, Inject, Input, OnInit, PLATFORM_ID, inject, input } from '@angular/core';
 import Aos from 'aos';
 import { DownloadService } from '../download.service';
 import { Gamocdileba } from '../gamocdileba';
 import { GamocdilebaService } from '../gamocdileba.service';
 import { Ganatleba } from '../ganatleba';
 import { RouterLink, RouterModule } from '@angular/router';
+import { LoaderComponent } from "../loader/loader.component";
 
 @Component({
-  selector: 'app-main',
-  standalone: true,
-  imports: [CommonModule,RouterLink,RouterModule],
-  templateUrl: './main.component.html',
-  styleUrl: './main.component.scss'
+    selector: 'app-main',
+    standalone: true,
+    templateUrl: './main.component.html',
+    styleUrl: './main.component.scss',
+    imports: [CommonModule, RouterLink, RouterModule, LoaderComponent]
 })
 export class MainComponent implements OnInit{
   
@@ -24,6 +25,7 @@ export class MainComponent implements OnInit{
   ganatlebaList:Ganatleba[]=[];
 
   certificateImage: boolean = false;
+
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -41,4 +43,6 @@ export class MainComponent implements OnInit{
       Aos.init();
     }
   }
+
+  
 }
