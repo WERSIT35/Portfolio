@@ -1,0 +1,35 @@
+<section class="sect2">
+    <h1>Education</h1>
+    <div class="ganatleba">
+        <ul>
+            <a>
+                <li>
+                    <div class="university">
+                        <h2>{{certify?.name}}</h2>
+                        <h3>{{certify?.marjor}}</h3>
+                        <p>{{certify?.date}}</p>
+                        <h3 class="subject">SUBJECTS:</h3>
+                        <ul class="subjects">
+                            <li>
+                                <h4>{{certify?.subject?.join(', ')}}</h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <img [src]="certify?.image" [alt]="certify?.alt">
+                    
+                    <div class="certificate">
+                        <ng-container *ngIf="certify?.certificates && certify?.certificates?.length; else noCertificates">
+                            <ng-container *ngFor="let certificate of certify?.certificates; let i = index">
+                                <img [src]="certificate" [alt]="certify?.altimages" (load)="certificateImage = true">
+                            </ng-container>
+                            <a *ngIf="certificateImage" href="">see all certifications</a>
+                        </ng-container>
+                        <ng-template #noCertificates>
+                        </ng-template>                            
+                    </div>
+                    
+                </li>
+            </a>
+        </ul>
+    </div>
+</section>

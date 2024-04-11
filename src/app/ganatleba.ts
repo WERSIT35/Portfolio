@@ -5,4 +5,10 @@ export interface Ganatleba {
     date:string,
     marjor:string,
     alt:string,
+
+    certificates: string[];
+    
+    subject:string[];
+
+    altimages:string[];
 }

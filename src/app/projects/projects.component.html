@@ -1,1 +1,25 @@
-<p>projects works!</p>
+
+<section class="sect1">
+    <h1 class="toptext">Web Applications</h1>
+  <div *ngFor="let proj of projects" class="outerboard">
+    <div class="inborder1">
+      <div class="intro">
+        <h1>{{proj.projName}}</h1>
+        <p>{{proj.date}}</p>
+      </div>
+      <div class="description">
+        <p>About: {{proj.about}}</p>
+        <p>Number Of Pages: {{proj.numOfPage}}</p>
+        <p>Duration: {{proj.duration}}</p>
+      </div>
+    </div>
+    <div class="inborder2">
+        <h1>Explore</h1>
+        <div  class="grid-container">
+            <img *ngFor="let image of proj.img" [src]="image" alt="Project Image">
+          </div>
+        <div class="link"><a [href]="proj.link">view live website</a></div>
+    </div>
+  </div>
+</section>
+

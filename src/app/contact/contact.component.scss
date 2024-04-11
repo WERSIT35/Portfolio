@@ -1,0 +1,224 @@
+section {
+  padding: 80px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .toptext {
+    width: 100%;
+        background-color: #151515;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='36' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23303030' stroke-width='12' stroke-opacity='0.79'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+        background-attachment: fixed;
+        text-align: center;
+        color: transparent;
+        font-size: 4rem;
+        -webkit-text-stroke: 2px var(--gold);
+        &:lang(en) {
+          font-family: "Oswald", sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+  }
+  .cont1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .cont11 {
+      width: 50%;
+      height: 70vh;
+      .image {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        .pattern {
+          height: 35%;
+          position: absolute;
+          z-index: 0;
+          width: 100%;
+        }
+        img {
+          z-index: 1;
+          width: 400px;
+          height: 400px;
+          object-fit: contain;
+          border-radius: 50%;
+          padding: 5px;
+          border: 10px solid var(--gold);
+          filter: drop-shadow(10px 10px 10px var(--dark-1));
+          background-color: #151515;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='36' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23303030' stroke-width='12' stroke-opacity='0.79'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+          background-attachment: fixed;
+        }
+      }
+    }
+    .cont12 {
+      width: 50%;
+      height: 40vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .continfo {
+        width: 80%;
+        height: 60%;
+        border-radius: 10px;
+        background-color: var(--white-tr);
+        backdrop-filter: blur(7px);
+        box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.473);
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        transition: 0.3s;
+        &:hover {
+          backdrop-filter: blur(3px);
+        }
+        .name {
+          
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-bottom: 20px;
+          h1 {
+            color: transparent;
+            -webkit-text-stroke: 1px var(--white);
+            font-size: clamp(1.5rem,2vw,2rem);
+            filter: drop-shadow(3px 3px 0 black);
+            &:lang(en) {
+              font-family: "Oswald", sans-serif;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+            }
+          }
+        }
+        .links {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          a {
+            text-decoration: none;
+            color: var(--white);
+            transition: 0.3s;
+            border: none;
+            &:lang(en) {
+              font-family: "Oswald", sans-serif;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+            }
+            &:hover {
+              filter: drop-shadow(3px 3px 0 black);
+              font-weight: 700;
+              scale: 1.1;
+              text-transform: uppercase;
+              background-image: linear-gradient(
+                -235deg,
+                rgb(39, 39, 39) 0%,
+                rgb(90, 62, 0) 10%,
+                rgb(121, 82, 0) 20%,
+                rgb(153, 105, 0) 30%,
+                rgb(194, 138, 19) 40%,
+                rgb(248, 192, 70) 50%,
+                rgb(194, 138, 19) 60%,
+                rgb(153, 105, 0) 70%,
+                rgb(121, 82, 0) 80%,
+                rgb(90, 62, 0) 90%,
+                rgb(39, 39, 39) 100%
+              );
+              background-size: auto auto;
+              background-clip: border-box;
+              background-size: 200% auto;
+              color: #fff;
+              background-clip: text;
+              color: transparent;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              animation: textclip 2s linear infinite;
+              display: inline-block;
+            }
+            i{
+              padding: 5px;
+            }
+          }
+        }
+      }
+      .conticons {
+        width: 80%;
+        height: 30%;
+        border-radius: 10px;
+        background-color: var(--white-tr);
+        backdrop-filter: blur(7px);
+        box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.473);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: 0.3s;
+        
+        &:hover {
+          backdrop-filter: blur(3px);
+        }
+        a {
+          i {
+            font-size: clamp(2.5rem, 1vw, 3rem);
+            color: white;
+          }
+
+          transition: 0.3s;
+          &:hover{
+            filter: drop-shadow(3px 3px 0 black); 
+            scale: 1.1;
+            text-transform: uppercase;
+              background-image: linear-gradient(
+                45deg,
+                rgb(121, 82, 0)0,
+                rgb(90, 62, 0)10%,
+                rgb(56, 38, 0)20%,
+                rgb(90, 62, 0)30%,
+                rgb(121, 82, 0)40%,
+                rgb(153, 105, 0) 50%,
+                rgb(194, 138, 19) 60%,
+                rgb(248, 192, 70) 70%,
+                rgb(194, 138, 19) 80%,
+                rgb(153, 105, 0) 90%,
+                rgb(121, 82, 0) 100%,
+              );
+              background-size: auto auto;
+              background-clip: border-box;
+              background-size: 200% auto;
+              color: #fff;
+              background-clip: text;
+              color: transparent;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              animation: txtclip 2s linear infinite;
+              display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+@keyframes txtclip {
+  to {
+    background-position: 200% center;
+  }
+}
+@keyframes animator {
+  0% {
+    opacity: 0;
+    transform: translateX(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}

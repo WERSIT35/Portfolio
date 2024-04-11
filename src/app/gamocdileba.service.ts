@@ -39,14 +39,6 @@ export class GamocdilebaService {
       "image":"assets/Experience/cmanagement.jpeg",
       "alt":"IT Content Manager",
     },
-    {
-      "id":5,
-      "position":"Deputy Director",
-      "info":"Ilia 2008 | Tbilisi, Georgia",
-      "date":"2019/2022",
-      "image":"assets/Experience/warehouse.png",
-      "alt":"Deputy Director",
-    },
   ]
   protected ganatlebaList:Ganatleba[]=[
     {
@@ -56,6 +48,12 @@ export class GamocdilebaService {
       "date":"2019-Present",
       "image":"assets/Education/ug.png",
       "alt":"University Of Georgia",
+      
+      "subject":["Azure/AWS","Windows/Linux","Java/C#/C++","IT services and project management","Networking","Oracle/SQL","CyberSec"],
+
+      "certificates": [],
+
+      "altimages":[],
     },
     {
       "id":2,
@@ -64,14 +62,26 @@ export class GamocdilebaService {
       "date":"2023.08.14",
       "image":"assets/Education/FCC.svg",
       "alt":"FreeCodeCamp",
+
+      "subject":["Responsive Web Design"],
+
+      "certificates": ["assets/Education/Certifications/FreecodeCamp/freecode.png"],
+
+      "altimages":[],
     },
     {
       "id":3,
       "name":"Microsoft Learn",
-      "marjor":"Azure, C#",
+      "marjor":"Development",
       "date":"2023.07-Present",
       "image":"assets/Education/microsoft.png",
       "alt":"Microsoft Learn",
+
+      "subject":["Azure","C#"],
+
+      "certificates": [],
+
+      "altimages":[],
     },
   ]
   //ganatleba

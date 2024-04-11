@@ -5,20 +5,25 @@ import { DownloadService } from '../download.service';
 import { Gamocdileba } from '../gamocdileba';
 import { GamocdilebaService } from '../gamocdileba.service';
 import { Ganatleba } from '../ganatleba';
+import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink,RouterModule],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
 export class MainComponent implements OnInit{
+  
+
   @Input() gamocdileba!:Gamocdileba;
   @Input() ganatleba!:Ganatleba;
 
   gamocdilebaList:Gamocdileba[]=[];
   ganatlebaList:Ganatleba[]=[];
+
+  certificateImage: boolean = false;
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,

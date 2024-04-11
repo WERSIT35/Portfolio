@@ -13,7 +13,7 @@
             </div>
             <div data-aos="fade-right" data-aos-duration="1000" class="buttons">
                 <button class="btn1" (click)="download()">Download CV</button>
-                <button class="btn2">Contact</button>    
+                <button class="btn2" [routerLink]="'/contact'" >Contact</button>    
             </div>
         </div>
         <div  class="image"><img src="../../assets/last.png" alt="Otar Davitashvili">
@@ -35,73 +35,88 @@
             </ul>
         </div>
     </section>
-    <!-- <section class="sect3">
-        <div class="tech">
-            <h2>Technical Skills</h2>
-            <ul class="skill-list">
-              <li>
-                <h3>Operating Systems:</h3>
-                <span class="skill-name">
-                    Windows 7/8.1/10/11
-                    </span>
-                <div class="progress-bar" style="width: 80%;"></div>
-              </li>
-              <li>
-                <h3>Problem Solving and Debugging:</h3>
-                <span class="skill-name">
-                    Problem Solving</span>
-                <div class="progress-bar" style="width: 80%;"></div>
-              </li>
-              <li>
-                <h3>Engineering:</h3>
-                <span class="skill-name">
-                    Computer Engineering</span>
-                <div class="progress-bar" style="width: 80%;"></div>
-                <span class="skill-name">
-                    Software Engineering</span>
-                <div class="progress-bar" style="width: 80%;"></div>
-              </li>
-              <li>
-                <h3>Web Design:</h3>
-                <span class="skill-name">
-                    Responsive Web Design</span>
-                <div class="progress-bar" style="width: 80%;"></div>
-              </li>
-            </ul>
+    <section class="sect15">
+        <h1>Skills / Tools</h1>
+        <div class="sect151">
+            <div class="angular" data-aos="fade-up">
+                <div class="top">
+                    <img src="assets/skills/angular.png" alt="">
+                    <h2>Angular</h2>
+                </div>
+                <div class="bottom">
+                    <div class="bot1">
+                        <img src="assets/skills/typescript.png" alt="">
+                        <h2>Typescript</h2>
+                    </div>
+                    <div class="bot2">
+                        <img src="assets/skills/sass.png" alt="">
+                        <h2>Sass</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="git" data-aos="fade-up">
+                <div class="mid1">
+                    <img src="assets/skills/github-sign.png" alt="">
+                    <h2>GitHub</h2>
+                </div>
+                <div class="mid2">
+                    <img src="assets/skills/c-.png" alt="">
+                    <h2>C++</h2>
+                </div>
+                <div class="mid3">
+                    <img src="assets/skills/c-sharp.png" alt="">
+                    <h2>C#</h2>
+                </div>
+            </div>
+            <div class="cloud" data-aos="fade-up">
+                <div class="top">
+                    <img src="assets/skills/server.png" alt="">
+                    <h2>Cloud</h2>
+                </div>
+                <div class="bottom">
+                    <div class="bot1">
+                        <img class="aws" src="assets/skills/aws.png" alt="">
+                        <h2>AWS</h2>
+                    </div>
+                    <div class="bot2">
+                        <img src="assets/skills/azure.png" alt="">
+                        <h2>Azure</h2>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="soft">
-            <h2>Soft Skills</h2>
-            <ul class="skill-list">
-              <li>
-                <span class="skill-name">Talking</span>
-                <div class="progress-bar" style="width: 80%;"></div>
-              </li>
-            </ul>
-        </div>
-      
-        <div class="prog">
-            <h2>Programming Languages</h2>
-            <ul class="skill-list">
-              <li>
-                <span class="skill-name">HTML/CSS</span>
-                <div class="progress-bar" style="width: 90%;"></div>
-              </li>
-            </ul>
-        </div>
-      </section> -->
+    </section>
       
     <section class="sect2">
         <h1>Education</h1>
         <div class="ganatleba">
             <ul>
-                <a *ngFor="let ganatleba of ganatlebaList" href="">
+                <a data-aos="fade-up" [routerLink]="['/certify',ganatleba.id]" *ngFor="let ganatleba of ganatlebaList" href="">
                     <li>
                         <div class="university">
                             <h2>{{ganatleba.name}}</h2>
                             <h3>{{ganatleba.marjor}}</h3>
                             <p>{{ganatleba.date}}</p>
+                            <h3 class="subject">SUBJECTS:</h3>
+                            <ul class="subjects">
+                                <li *ngFor="let subject of ganatleba.subject">
+                                    <h4>{{subject}}</h4>
+                                </li>
+                            </ul>
                         </div>
                         <img [src]="ganatleba.image" [alt]="ganatleba.alt">
+                        
+                        <div class="certificate">
+                            <ng-container *ngIf="ganatleba.certificates && ganatleba.certificates.length > 0; else noCertificates">
+                                <ng-container *ngFor="let certificate of ganatleba.certificates; let i = index">
+                                    <img [src]="certificate" [alt]="ganatleba.altimages" (load)="certificateImage = true">
+                                </ng-container>
+                                <a *ngIf="certificateImage" href="">see all certifications</a>
+                            </ng-container>
+                            <ng-template #noCertificates>
+                            </ng-template>                            
+                        </div>
+                        
                     </li>
                 </a>
             </ul>
