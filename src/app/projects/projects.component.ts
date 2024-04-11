@@ -25,4 +25,14 @@ export class ProjectsComponent implements OnInit{
     this.projects=this.projectService.getAllprojects();
   }
 
+  isFullscreen = false;
+  fullscreenImageSrc: string | null = null;
+
+
+  toggleFullscreen(imageUrl: string | null): void {
+    this.isFullscreen = !!imageUrl;
+    this.fullscreenImageSrc = imageUrl;
+  }
+  
+  
 }

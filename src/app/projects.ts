@@ -9,4 +9,6 @@ export interface Projects {
     img:string[],
 
     link:string,
+
+    iflink:boolean,
 }

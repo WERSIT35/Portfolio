@@ -1,6 +1,5 @@
-
 <section class="sect1">
-    <h1 class="toptext">Web Applications</h1>
+  <h1 class="toptext">Web Applications</h1>
   <div *ngFor="let proj of projects" class="outerboard">
     <div class="inborder1">
       <div class="intro">
@@ -14,12 +13,18 @@
       </div>
     </div>
     <div class="inborder2">
-        <h1>Explore</h1>
-        <div  class="grid-container">
-            <img *ngFor="let image of proj.img" [src]="image" alt="Project Image">
-          </div>
-        <div class="link"><a [href]="proj.link">view live website</a></div>
+      <h1>Explore</h1>
+      <div class="grid-container">
+        <img *ngFor="let image of proj.img" [src]="image" alt="Project Image" (click)="toggleFullscreen(image)">
+      </div>
+      <div *ngIf="proj.iflink" class="link"><a [href]="proj.link" target="_blank">view live website</a></div>
     </div>
   </div>
+  <!-- Fullscreen Image -->
+  <div class="fullscreen-overlay" [class.active]="isFullscreen" *ngIf="isFullscreen">
+    <div class="fullscreen-image-container">
+      <img [src]="fullscreenImageSrc" alt="Fullscreen Image" (click)="toggleFullscreen(null)">
+    </div>
+  </div>
+  
 </section>
-
