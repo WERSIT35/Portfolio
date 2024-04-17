@@ -41,18 +41,24 @@ export class HeaderComponent implements OnInit{
 
 
   touchStartX: number = 0;
+menuWidth: number = 0;
 
 onTouchStart(event: TouchEvent) {
   this.touchStartX = event.touches[0].clientX;
 }
 
 onTouchMove(event: TouchEvent) {
-  if (this.isMenuOpen) {
-    const touchMoveX = event.touches[0].clientX;
-    const deltaX = touchMoveX - this.touchStartX;
-    const menu = document.querySelector('.menubar') as HTMLElement; // Narrowed type to HTMLElement
-    if (menu) {
+  const touchMoveX = event.touches[0].clientX;
+  const deltaX = touchMoveX - this.touchStartX;
+  const menu = document.querySelector('.menubar') as HTMLElement;
+  if (menu) {
+    if (!this.menuWidth) {
+      this.menuWidth = menu.clientWidth;
+    }
+    if (this.isMenuOpen) {
       menu.style.transform = `translateX(${Math.max(0, deltaX)}px)`;
+    } else {
+      menu.style.transform = `translateX(${Math.min(0, deltaX)}px)`;
     }
   }
 }
@@ -60,11 +66,12 @@ onTouchMove(event: TouchEvent) {
 onTouchEnd(event: TouchEvent) {
   const touchEndX = event.changedTouches[0].clientX;
   const deltaX = touchEndX - this.touchStartX;
-  const menuWidth = (document.querySelector('.menubar') as HTMLElement)?.clientWidth || 0; // Narrowed type to HTMLElement
-  if (deltaX > menuWidth / 2) {
+  if (this.isMenuOpen && deltaX > this.menuWidth / 2) {
     this.isMenuOpen = false;
+  } else if (!this.isMenuOpen && deltaX < -this.menuWidth / 2) {
+    this.isMenuOpen = true;
   }
-  const menu = document.querySelector('.menubar') as HTMLElement; // Narrowed type to HTMLElement
+  const menu = document.querySelector('.menubar') as HTMLElement;
   if (menu) {
     menu.style.transform = '';
   }
