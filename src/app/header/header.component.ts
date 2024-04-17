@@ -38,4 +38,36 @@ export class HeaderComponent implements OnInit{
       this.isMenuOpen = false;
     }
   }
+
+
+  touchStartX: number = 0;
+
+onTouchStart(event: TouchEvent) {
+  this.touchStartX = event.touches[0].clientX;
+}
+
+onTouchMove(event: TouchEvent) {
+  if (this.isMenuOpen) {
+    const touchMoveX = event.touches[0].clientX;
+    const deltaX = touchMoveX - this.touchStartX;
+    const menu = document.querySelector('.menubar') as HTMLElement; // Narrowed type to HTMLElement
+    if (menu) {
+      menu.style.transform = `translateX(${Math.max(0, deltaX)}px)`;
+    }
+  }
+}
+
+onTouchEnd(event: TouchEvent) {
+  const touchEndX = event.changedTouches[0].clientX;
+  const deltaX = touchEndX - this.touchStartX;
+  const menuWidth = (document.querySelector('.menubar') as HTMLElement)?.clientWidth || 0; // Narrowed type to HTMLElement
+  if (deltaX > menuWidth / 2) {
+    this.isMenuOpen = false;
+  }
+  const menu = document.querySelector('.menubar') as HTMLElement; // Narrowed type to HTMLElement
+  if (menu) {
+    menu.style.transform = '';
+  }
+}
+
 }
