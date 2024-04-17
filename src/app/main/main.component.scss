@@ -726,6 +726,7 @@ main {
         height:60%;
         width: 100%;
         .titleContainer{
+          transform: translateY(30px);
           width: 60%;
         }
         .txtContainer{
@@ -736,10 +737,11 @@ main {
         transform: translateY(-40px);
       }
       .image {
+        transform: translateY(40px);
         width: 100%;
         img{
-          height: 150px;
-          width: 150px;
+          height: 300px;
+          width: 300px;
         }
       }
     }
@@ -813,10 +815,11 @@ main {
         transform: translateY(-40px);
       }
       .image {
+        transform: translateY(40px);
         width: 100%;
         img{
-          height: 150px;
-          width: 150px;
+          height: 250px;
+          width: 250px;
         }
       }
     }
