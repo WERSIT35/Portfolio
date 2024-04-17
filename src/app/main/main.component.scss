@@ -805,9 +805,15 @@ main {
           margin-left: 30px;
           width: 97%;
           border-radius: 5px;
-          transform: translateY(50px);
+          h1{
+            &:nth-of-type(1){
+              -webkit-text-stroke: 0.5px var(--white);
+
+            }
+          }
         }
         .txtContainer{
+          transform: translateY(-20px);
           width: 90%;
           p{
             line-height: 1.5;
@@ -815,10 +821,10 @@ main {
         }
       }
       .buttons{
-        transform: translateY(-45px);
+        transform: translateY(-65px);
       }
       .image {
-        transform: translateY(40px);
+        transform: translateY(30px);
         width: 100%;
         img{
           height: 250px;
