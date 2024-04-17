@@ -676,6 +676,14 @@ main {
         height: 100%;
         
       }
+      .titleContainer{
+        h1{
+          &:nth-of-type(1){
+            -webkit-text-stroke: 1px var(--white);
+
+          }
+        }
+      }
       .image {
         scale: 0.8;
         img {
@@ -729,6 +737,12 @@ main {
         .titleContainer{
           transform: translateY(30px);
           width: 60%;
+          h1{
+            &:nth-of-type(1){
+              -webkit-text-stroke: 0.5px var(--white);
+
+            }
+          }
         }
         .txtContainer{
           width: 90%;
