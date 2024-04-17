@@ -1,11 +1,29 @@
 <header>
-    <nav>
-        <ul>
-            <li data-aos="fade-down"><a [routerLink]="'/home'">Home</a></li>
-            <li data-aos="fade-down"><a [routerLink]="'/projects'">Projects</a></li>
-            <li data-aos="fade-down"><a [routerLink]="'/contact'">Contact</a></li>
-            <li data-aos="fade-down"><a [routerLink]="'/blog'">Blog</a></li>
-            <li data-aos="fade-down"><a [routerLink]="'/about'">About</a></li>        
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a [routerLink]="'/home'" data-aos="fade-down">Home</a></li>
+      <li><a [routerLink]="'/projects'" data-aos="fade-down">Projects</a></li>
+      <li><a [routerLink]="'/contact'" data-aos="fade-down">Contact</a></li>
+      <li><a [routerLink]="'/blog'" data-aos="fade-down">Blog</a></li>
+      <li><a [routerLink]="'/about'" data-aos="fade-down">About</a></li>
+    </ul>
+    <div
+      class="hamburger"
+      (click)="toggleNav()"
+      [class.hamburger-active]="isMenuOpen"
+    >
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+  </nav>
+  <div class="menubar" [class.active]="isMenuOpen">
+    <ul>
+        <li><a [routerLink]="'/home'" (click)="closeMenu()">Home</a></li>
+        <li><a [routerLink]="'/projects'" (click)="closeMenu()">Projects</a></li>
+        <li><a [routerLink]="'/contact'" (click)="closeMenu()">Contact</a></li>
+        <li><a [routerLink]="'/blog'" (click)="closeMenu()">Blog</a></li>
+        <li><a [routerLink]="'/about'" (click)="closeMenu()">About</a></li>
+    </ul>
+  </div>
 </header>

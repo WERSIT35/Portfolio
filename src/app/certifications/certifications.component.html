@@ -15,20 +15,21 @@
                             </li>
                         </ul>
                     </div>
+
                     <img [src]="certify?.image" [alt]="certify?.alt">
                     
-                    <div class="certificate">
-                        <ng-container *ngIf="certify?.certificates && certify?.certificates?.length; else noCertificates">
-                            <ng-container *ngFor="let certificate of certify?.certificates; let i = index">
-                                <img [src]="certificate" [alt]="certify?.altimages" (load)="certificateImage = true">
-                            </ng-container>
-                            <a *ngIf="certificateImage" href="">see all certifications</a>
-                        </ng-container>
-                        <ng-template #noCertificates>
-                        </ng-template>                            
-                    </div>
+                    
                     
                 </li>
+                <div class="certificate">
+                    <ng-container *ngIf="certify?.certificates && certify?.certificates?.length; else noCertificates">
+                        <ng-container *ngFor="let certificate of certify?.certificates; let i = index">
+                            <img [src]="certificate" [alt]="certify?.altimages" (load)="certificateImage = true">
+                        </ng-container>
+                    </ng-container>
+                    <ng-template #noCertificates>
+                    </ng-template>                            
+                </div>
             </a>
         </ul>
     </div>

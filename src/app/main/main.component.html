@@ -11,7 +11,7 @@
                     Accomplished Angular Developer, proficient in dev tools and languages, Skilled in strategic leadership, I am eager to contribute my expertise to a technology-driven team, emphasizing adaptability, attention to detail, and dedication to delivering exceptional results.
                 </p>
             </div>
-            <div data-aos="fade-right" data-aos-duration="1000" class="buttons">
+            <div class="buttons">
                 <button class="btn1" (click)="download()">Download CV</button>
                 <button class="btn2" [routerLink]="'/contact'" >Contact</button>    
             </div>
@@ -108,8 +108,8 @@
                         
                         <div class="certificate">
                             <ng-container *ngIf="ganatleba.certificates && ganatleba.certificates.length > 0; else noCertificates">
-                                <ng-container *ngFor="let certificate of ganatleba.certificates; let i = index">
-                                    <img [src]="certificate" [alt]="ganatleba.altimages" (load)="certificateImage = true">
+                                <ng-container *ngIf="ganatleba.certificates && ganatleba.certificates.length > 0">
+                                    <img *ngIf="ganatleba.certificates.length > 0" [src]="ganatleba.certificates[0]" [alt]="ganatleba.altimages" (load)="certificateImage = true">
                                 </ng-container>
                                 <a *ngIf="certificateImage" href="">see all certifications</a>
                             </ng-container>
