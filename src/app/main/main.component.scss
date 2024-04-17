@@ -809,10 +809,13 @@ main {
         }
         .txtContainer{
           width: 90%;
+          p{
+            line-height: 1.5;
+          }
         }
       }
       .buttons{
-        transform: translateY(-65px);
+        transform: translateY(-45px);
       }
       .image {
         transform: translateY(40px);
