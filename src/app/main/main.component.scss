@@ -127,6 +127,7 @@ main {
       align-items: center;
       justify-self: center;
       color: var(--white);
+      z-index: 1000;
       bottom: 3%;
       animation: hanging 2s infinite;
       -webkit-text-stroke: 0.2px var(--white);
