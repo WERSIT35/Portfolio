@@ -17,7 +17,7 @@
       <span class="line"></span>
     </div>
   </nav>
-  <div class="menubar" [class.active]="isMenuOpen" (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd($event)">
+  <div class="menubar" [class.active]="isMenuOpen">
     <ul>
         <li><a [routerLink]="'/home'" (click)="closeMenu()">Home</a></li>
         <li><a [routerLink]="'/projects'" (click)="closeMenu()">Projects</a></li>

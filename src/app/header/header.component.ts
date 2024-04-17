@@ -38,43 +38,5 @@ export class HeaderComponent implements OnInit{
       this.isMenuOpen = false;
     }
   }
-
-
-  touchStartX: number = 0;
-menuWidth: number = 0;
-
-onTouchStart(event: TouchEvent) {
-  this.touchStartX = event.touches[0].clientX;
-}
-
-onTouchMove(event: TouchEvent) {
-  const touchMoveX = event.touches[0].clientX;
-  const deltaX = touchMoveX - this.touchStartX;
-  const menu = document.querySelector('.menubar') as HTMLElement;
-  if (menu) {
-    if (!this.menuWidth) {
-      this.menuWidth = menu.clientWidth;
-    }
-    if (this.isMenuOpen) {
-      menu.style.transform = `translateX(${Math.max(0, deltaX)}px)`;
-    } else {
-      menu.style.transform = `translateX(${Math.min(0, deltaX)}px)`;
-    }
-  }
-}
-
-onTouchEnd(event: TouchEvent) {
-  const touchEndX = event.changedTouches[0].clientX;
-  const deltaX = touchEndX - this.touchStartX;
-  if (this.isMenuOpen && deltaX > this.menuWidth / 2) {
-    this.isMenuOpen = false;
-  } else if (!this.isMenuOpen && deltaX < -this.menuWidth / 2) {
-    this.isMenuOpen = true;
-  }
-  const menu = document.querySelector('.menubar') as HTMLElement;
-  if (menu) {
-    menu.style.transform = '';
-  }
-}
-
+  
 }
