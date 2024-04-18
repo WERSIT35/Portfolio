@@ -279,36 +279,12 @@
 
   @media only screen and (min-width: 1024px) and (max-width: 1400px) {
     .sect1{
-      .toptext{
-        
-      }
       .outerboard{
-        .inborder1{
-          .intro{
-            h1{
-  
-            }
-            p{
-  
-            }
-          }
-          .description{
-  
-          }
-        }
         .inborder2{
-          h1{
-  
-          }
           .grid-container{
             img{
               width: 250px;
               height: 130px;
-            }
-          }
-          .link{
-            a{
-              
             }
           }
         }
@@ -317,37 +293,13 @@
   }  
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .sect1{
-    .toptext{
-
-    }
     .outerboard{
-      .inborder1{
-        .intro{
-          h1{
-
-          }
-          p{
-
-          }
-        }
-        .description{
-
-        }
-      }
       .inborder2{
-        h1{
-
-        }
         .grid-container{
           grid-template-columns: repeat(1, 1fr);
           img{
             width: 200px;
             height: 100px;
-          }
-        }
-        .link{
-          a{
-
           }
         }
       }
@@ -364,17 +316,8 @@
       .inborder1{
         width: 100%;
         height: max-content;
-        .intro{
-          h1{
-
-          }
-          p{
-
-          }
-        }
         .description{
           height: max-content;
-
         }
       }
       .inborder2{
@@ -396,9 +339,6 @@
         }
         .link{
           padding: 10px 0;
-          a{
-
-          }
         }
       }
     }
@@ -407,36 +347,15 @@
 @media only screen and (max-width: 588px) {
   .sect1{
     .toptext{
-
+      -webkit-text-stroke: 0.7px var(--gold);
     }
     .outerboard{
-      .inborder1{
-        .intro{
-          h1{
-
-          }
-          p{
-
-          }
-        }
-        .description{
-
-        }
-      }
       .inborder2{
-        h1{
-
-        }
         .grid-container{
           grid-template-columns: repeat(1, 1fr);
           img{
             width: 200px;
             height: 100px;
-          }
-        }
-        .link{
-          a{
-
           }
         }
       }
