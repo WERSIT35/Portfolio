@@ -222,3 +222,124 @@ section {
     transform: translateX(0%);
   }
 }
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  section{
+    .toptext{
+      
+    }
+    .cont1{
+      .cont11{
+        .image{
+          img{
+            width: 300px;
+            height: 300px;
+          }
+        }
+      }
+    }
+    .cont12{
+      align-items: center;
+      .continfo{
+        .name
+        {
+        }
+        .links{
+          flex-direction: column;
+        }
+      }
+      .conticons{
+        a{
+
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 769px) {
+  section{
+    .toptext{
+      -webkit-text-stroke: 0.7px var(--gold);
+    }
+    .cont1{
+      width: 100%;
+      padding: 10px 0;
+      flex-direction: column;
+      .cont11{
+        width: 100%;
+        height: min-content;
+        .image{
+          img{
+            width: 250px;
+            height: 250px;
+          }
+        }
+      }
+      .cont12{
+        width: 100%;
+        height: max-content;
+        padding: 10px 0;
+        align-items: center;
+        .continfo{
+          margin: 10px 0;
+          .name
+          {
+          }
+          .links{
+            flex-direction: column;
+          }
+        }
+        .conticons{
+          padding: 30px 0;
+          a{
+  
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 588px) {
+  section{
+    .toptext{
+      -webkit-text-stroke: 0.7px var(--gold);
+    }
+    .cont1{
+      width: 100%;
+      padding: 10px 0;
+      flex-direction: column;
+      .cont11{
+        width: 100%;
+        height: min-content;
+        .image{
+          img{
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+      .cont12{
+        width: 100%;
+        height: max-content;
+        padding: 10px 0;
+        align-items: center;
+        .continfo{
+          margin: 10px 0;
+          .name
+          {
+          }
+          .links{
+            flex-direction: column;
+          }
+        }
+        .conticons{
+          padding: 30px 0;
+          a{
+  
+          }
+        }
+      }
+    }
+  }
+}
