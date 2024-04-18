@@ -13,7 +13,7 @@
         background-attachment: fixed;
         text-align: center;
         color: transparent;
-        font-size: 4rem;
+        font-size: clamp(2.5rem, 3.5vw, 3.5rem);
         -webkit-text-stroke: 2px var(--gold);
         &:lang(en) {
           font-family: "Oswald", sans-serif;
@@ -58,7 +58,7 @@
     }
     h1{
         color:var(--dark-v1); 
-        font-size: clamp(2rem, 2.5vw,2.5rem);
+        font-size: clamp(1.5rem, 2.5vw, 2.5rem);
         -webkit-text-stroke: 1px var(--gold);
         padding: 10px 0 0 15px;
         &:lang(en) {
@@ -71,6 +71,7 @@
     p{
         color: var(--white);
         padding: 10px 0 0 15px ;
+        font-size: clamp(0.8rem, 2vw, 1.5rem);
         filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.548));
         &:lang(en) {
             font-family: "Oswald", sans-serif;
@@ -99,7 +100,7 @@
         color: white;
         text-align: justify;
         padding: 15px;
-        font-size: clamp(0.8rem, 2vw,1.2rem);
+        font-size: clamp(0.7rem, 1.5vw,1.2rem);
         &:lang(en) {
             font-family: "Oswald", sans-serif;
             text-transform: uppercase;
@@ -125,7 +126,7 @@
     }
     h1{
         color: var(--white);
-        font-size: clamp(2rem, 2.5vw,2.5rem);
+        font-size: clamp(1.2rem, 2vw, 2rem);
         padding-left: 30px;
         width: 100%;
         &:lang(en) {
@@ -141,11 +142,12 @@
     justify-content: center;
     align-items: center;
     a{
-        width: 20%;
-        padding: 10px 0;
+        width: min-content;
+        padding: 10px 10px;
         text-decoration: none;
         border: 3px solid var(--gold);
         font-size: clamp(0.8rem, 1.5vw,1.2rem);
+        text-wrap: nowrap;
         color: var(--white);
         background-color: var(--dark-1);
         text-align: center;
@@ -274,3 +276,170 @@
     object-fit: contain;
   }
   
+
+  @media only screen and (min-width: 1024px) and (max-width: 1400px) {
+    .sect1{
+      .toptext{
+        
+      }
+      .outerboard{
+        .inborder1{
+          .intro{
+            h1{
+  
+            }
+            p{
+  
+            }
+          }
+          .description{
+  
+          }
+        }
+        .inborder2{
+          h1{
+  
+          }
+          .grid-container{
+            img{
+              width: 250px;
+              height: 130px;
+            }
+          }
+          .link{
+            a{
+              
+            }
+          }
+        }
+      }
+    }
+  }  
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .sect1{
+    .toptext{
+
+    }
+    .outerboard{
+      .inborder1{
+        .intro{
+          h1{
+
+          }
+          p{
+
+          }
+        }
+        .description{
+
+        }
+      }
+      .inborder2{
+        h1{
+
+        }
+        .grid-container{
+          grid-template-columns: repeat(1, 1fr);
+          img{
+            width: 200px;
+            height: 100px;
+          }
+        }
+        .link{
+          a{
+
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 769px) {
+  .sect1{
+    .toptext{
+      -webkit-text-stroke: 0.7px var(--gold);
+    }
+    .outerboard{
+      flex-direction: column;
+      .inborder1{
+        width: 100%;
+        height: max-content;
+        .intro{
+          h1{
+
+          }
+          p{
+
+          }
+        }
+        .description{
+          height: max-content;
+
+        }
+      }
+      .inborder2{
+        width: 95%;
+        height: max-content;
+        transform: translate(0,0);
+        margin: 0;
+        margin-top: 20px;
+        padding: 0;
+        h1{
+          padding: 10px 10px;
+        }
+        .grid-container{
+          grid-template-columns: repeat(2, 1fr);
+          img{
+            width: 200px;
+            height: 100px;
+          }
+        }
+        .link{
+          padding: 10px 0;
+          a{
+
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 588px) {
+  .sect1{
+    .toptext{
+
+    }
+    .outerboard{
+      .inborder1{
+        .intro{
+          h1{
+
+          }
+          p{
+
+          }
+        }
+        .description{
+
+        }
+      }
+      .inborder2{
+        h1{
+
+        }
+        .grid-container{
+          grid-template-columns: repeat(1, 1fr);
+          img{
+            width: 200px;
+            height: 100px;
+          }
+        }
+        .link{
+          a{
+
+          }
+        }
+      }
+    }
+  }
+}
