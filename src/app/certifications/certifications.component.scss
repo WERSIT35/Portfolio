@@ -6,7 +6,7 @@
     background-attachment: fixed;
     text-align: center;
     color: transparent;
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 3.5vw, 3.5rem);
     -webkit-text-stroke: 2px var(--gold);
     &:lang(en) {
       font-family: "Oswald", sans-serif;
@@ -62,7 +62,7 @@
           }
           h2 {
             top: 20%;
-            font-size: 2.5rem;
+            font-size: clamp(1.5rem, 2.5vw, 2.5rem);
             transition: 0.3s;
             &:lang(en) {
               font-family: "Oswald", sans-serif;
@@ -72,7 +72,7 @@
           }
           h3 {
             top: 50%;
-            font-size: 1.5rem;
+            font-size: clamp(1rem, 1.5vw, 1.5rem);
             transition: 0.3s;
             &:lang(en) {
               font-family: "Oswald", sans-serif;
@@ -83,6 +83,7 @@
             color: var(--white);
             padding: 3px;
             border-bottom: 2px solid var(--gold);
+            font-size: clamp(0.8rem, 1vw, 1rem);
             filter: drop-shadow(3px 3px 0 var(--dark-1));
             &:lang(en) {
               font-family: "Josefin Sans", sans-serif;
@@ -91,6 +92,7 @@
           }
           P {
             bottom: 20%;
+            font-size: clamp(0.8rem, 1vw, 1rem);
             &:lang(en) {
               font-family: "Josefin Sans", sans-serif;
               letter-spacing: 2px;
@@ -183,6 +185,52 @@
           li {
             img {
               width: 40vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+@media only screen and (max-width: 769px) {
+  .sect2{
+    h1{
+      -webkit-text-stroke: 0.7px var(--gold);
+    }
+    .ganatleba{
+      ul{
+        a{
+          width: 80%;
+          li{
+            display: flex;
+            flex-direction: column;
+            .university{
+              width: 97%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 588px) {
+  .sect2{
+    h1{
+      -webkit-text-stroke: 0.7px var(--gold);
+    }
+    .ganatleba{
+      ul{
+        a{
+          width: 80%;
+          li{
+            display: flex;
+            flex-direction: column;
+            .university{
+              width: 97%;
             }
           }
         }
