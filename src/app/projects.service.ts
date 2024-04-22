@@ -23,7 +23,7 @@ export class ProjectsService {
 
       link:"",
 
-      iflink:true,
+      iflink:false,
     },
     {
       projName:"Cyber Blog",
