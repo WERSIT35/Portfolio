@@ -21,7 +21,7 @@ export class ProjectsService {
         "assets/projects/newHouse/pic3.png",  
       ],
 
-      link:"#",
+      link:"",
 
       iflink:true,
     },
