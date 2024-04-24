@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class DownloadService {
   downloadCV(): void {
-    const filePath = 'assets/OTAR DAVITASHVILI.pdf'; // Adjust the path based on your project structure
+    const filePath = 'assets/davitashvili otar.pdf';
     const link = document.createElement('a');
     link.href = filePath;
     link.download = 'Otar Davitashvili Resume.pdf';
