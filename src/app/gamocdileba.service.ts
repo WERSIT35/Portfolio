@@ -65,7 +65,7 @@ export class GamocdilebaService {
 
       "subject":["Responsive Web Design"],
 
-      "certificates": ["assets/Education/Certifications/FreecodeCamp/freecode.png","assets/Education/Certifications/FreecodeCamp/freecode.png","assets/Education/Certifications/FreecodeCamp/freecode.png","assets/Education/Certifications/FreecodeCamp/freecode.png",],
+      "certificates": ["assets/Education/Certifications/FreecodeCamp/freecode.png",],
 
       "altimages":[],
     },
