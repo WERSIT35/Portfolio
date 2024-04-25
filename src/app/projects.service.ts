@@ -21,9 +21,9 @@ export class ProjectsService {
         "assets/projects/newHouse/pic3.png",  
       ],
 
-      link:"",
+      link:"https://akhalisakhli.com/",
 
-      iflink:false,
+      iflink:true,
     },
     {
       projName:"Cyber Blog",
