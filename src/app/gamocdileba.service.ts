@@ -57,20 +57,6 @@ export class GamocdilebaService {
     },
     {
       "id":2,
-      "name":"FreeCodeCamp",
-      "marjor":"Responsive Web Design",
-      "date":"2023.08.14",
-      "image":"assets/Education/FCC.svg",
-      "alt":"FreeCodeCamp",
-
-      "subject":["Responsive Web Design"],
-
-      "certificates": ["assets/Education/Certifications/FreecodeCamp/freecode.png",],
-
-      "altimages":[],
-    },
-    {
-      "id":3,
       "name":"Microsoft Learn",
       "marjor":"Development",
       "date":"2023.07-Present",
@@ -83,6 +69,35 @@ export class GamocdilebaService {
 
       "altimages":[],
     },
+    {
+      "id":3,
+      "name":"W3schools",
+      "marjor":"",
+      "date":"2023.08.14",
+      "image":"assets/Education/W3Schools_logo.svg.png",
+      "alt":"FreeCodeCamp",
+
+      "subject":["SASS, AWS"],
+
+      "certificates": ["assets/Education/Certifications/AWS/AWS.png",],
+
+      "altimages":[],
+    },
+    {
+      "id":4,
+      "name":"FreeCodeCamp",
+      "marjor":"",
+      "date":"2023.08.14",
+      "image":"assets/Education/FCC.svg",
+      "alt":"FreeCodeCamp",
+
+      "subject":["Responsive Web Design"],
+
+      "certificates": ["assets/Education/Certifications/FreecodeCamp/freecode.png",],
+
+      "altimages":[],
+    },
+    
   ]
   //ganatleba
   getAllGanatleba():Ganatleba[]{

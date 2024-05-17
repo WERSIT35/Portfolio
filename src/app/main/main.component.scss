@@ -1,3 +1,8 @@
+@mixin center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 main {
   width: 100%;
   overflow: hidden;
@@ -5,9 +10,7 @@ main {
     height: 100vh;
     // backdrop-filter: blur(10px);
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center;
     .nameSurname {
       z-index: 998;
       width: 50%;
@@ -73,10 +76,8 @@ main {
     .image {
       width: 50%;
       height: 100%;
-      display: flex;
+      @include center;
       position: relative;
-      justify-content: center;
-      align-items: center;
       .pattern {
         height: 35%;
         position: absolute;
@@ -123,10 +124,8 @@ main {
     }
     .abs {
       position: absolute;
-      display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-self: center;
+      @include center;
       color: var(--white);
       z-index: 998;
       bottom: 3%;
@@ -189,11 +188,8 @@ main {
               background-color: var(--dark-tr);
               backdrop-filter: blur(10px);
               color: var(--white);
-              display: flex;
               text-align: center;
-              justify-content: center;
-              align-items: center;
-              justify-content: center;
+              @include center;
               font-size: clamp(0.7rem, 1.2vw, 1rem);
               font-family: "Josefin Sans", sans-serif;
               padding: 5px;
@@ -201,10 +197,8 @@ main {
               border: 1px solid var(--gold);
             }
             h2 {
-              display: flex;
+              @include center;
               text-align: center;
-              justify-content: center;
-              align-items: center;
               justify-content: center;
               text-transform: uppercase;
               font-size: clamp(1rem, 1.5vw, 1.2rem);
@@ -246,9 +240,7 @@ main {
     }
     .ganatleba {
       ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include center;
         flex-direction: column;
         a {
           padding: 20px;
@@ -364,31 +356,8 @@ main {
               }
             }
           }
-          &:nth-child(2) {
-            li {
-              img {
-                filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg)
-                  brightness(65%) contrast(100%);
-              }
-            }
-          }
           &:hover li img {
             filter: brightness(100%);
-          }
-          &:nth-child(2):hover {
-            li {
-              img {
-                filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg)
-                  brightness(100%) contrast(100%);
-              }
-            }
-          }
-          &:nth-child(3) {
-            li {
-              img {
-                width: 40vw;
-              }
-            }
           }
         }
       }
@@ -422,9 +391,7 @@ main {
         }
       }
       .angular {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include center;
         flex-direction: column;
         gap: 15px;
         .top {
@@ -447,9 +414,7 @@ main {
           h2 {
             font-size: clamp(1.5rem, 3vw, 2.5rem);
             text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include center;
             color: white;
             background: none;
             &:lang(en) {
@@ -539,9 +504,7 @@ main {
         }
       }
       .cloud {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include center;
         flex-direction: column;
         gap: 15px;
         .top {
@@ -563,9 +526,7 @@ main {
           h2 {
             font-size: clamp(1.5rem, 3vw, 2.5rem);
             text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include center;
             color: white;
             background: none;
             &:lang(en) {
