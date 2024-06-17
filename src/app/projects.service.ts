@@ -7,6 +7,25 @@ import { Projects } from './projects';
 export class ProjectsService {
   private projectsList:Projects[]=[
     {
+      projName:"HeatFlow",
+      date:"18/6/2024",
+
+      about:'Developed and designed an industrial website for "HeatFlow," showcasing tubular heating elements, product specifications, and company information. Implemented user-friendly navigation and responsive design for optimal viewing across devices. Incorporated visually engaging graphics and intuitive UI/UX elements to enhance user experience.',
+      numOfPage:5,
+      duration:"1 Week",
+
+      img:[
+        "assets/projects/heatFlow/1.png",
+        "assets/projects/heatFlow/2.png",
+        "assets/projects/heatFlow/3.png",
+        "assets/projects/heatFlow/4.png",  
+      ],
+
+      link:"https://heatflow.netlify.app",
+
+      iflink:true,
+    },
+    {
       projName:"Akhali Sakhli",
       date:"4/5/2024",
 
