@@ -91,11 +91,11 @@ export class GamocdilebaService {
       "image":"assets/Education/FCC.svg",
       "alt":"FreeCodeCamp",
 
-      "subject":["Responsive Web Design"],
+      "subject":["Responsive Web Design","JavaScript Algorithms and Data Structures"],
 
       "certificates": ["assets/Education/Certifications/FreecodeCamp/responsive.png","assets/Education/Certifications/FreecodeCamp/js.png"],
 
-      "altimages":[],
+      "altimages":["Responsive Web Design certification","Javascript algorithms and data structures certification"],
     },
     
   ]
