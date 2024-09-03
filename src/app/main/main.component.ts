@@ -16,8 +16,6 @@ import { LoaderComponent } from "../loader/loader.component";
     imports: [CommonModule, RouterLink, RouterModule, LoaderComponent]
 })
 export class MainComponent implements OnInit{
-  
-
   @Input() gamocdileba!:Gamocdileba;
   @Input() ganatleba!:Ganatleba;
 
